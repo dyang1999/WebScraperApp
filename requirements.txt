@@ -1,0 +1,5 @@
+requests
+flask_paginate
+Flask
+beautifulsoup4
+lxml

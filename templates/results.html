@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <div class="container">
+    <div class="row">
+      <!-- Download form -->
+      <div class="col">
+        <!-- Download button-->
+        <button class="btn btn-success col-sm mt-2" type='button' onclick="exportTextToHTML('result.html')">Download</button>
+        <!-- Print button-->
+        <button class="btn btn-danger col-sm mt-2" type='button' onclick="print()">Print</button>
+      </div>
+    
+      <!-- Results table-->
+      <table class="table mt-3" id="tags">
+        <thead>
+          <tr>
+            {% for header in results[0] %}
+              <th scope="col">{{ header }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in results %}
+            <tr>
+              {% for key, value in row.items() %}
+                <td>{{ value }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <a class="btn btn-secondary mx-auto" href="/">Home</a>
+  </div>
+  
+  <script type="text/javascript">
+    function downloadCSV(html, filename) {
+      var htmlFile;
+      var downloadLink;
+
+      // html file -- plain/test   csv -- text/csv
+      htmlFile = new Blob([html], {type: "plain/text"});
+
+      // Download link
+      downloadLink = document.createElement("a");
+
+      // File name
+      downloadLink.download = filename;
+
+      // Create a link to the file
+      downloadLink.href = window.URL.createObjectURL(htmlFile);
+
+      // Hide download link
+      downloadLink.style.display = "none";
+
+      // Add the link to DOM
+      document.body.appendChild(downloadLink);
+
+      // Click download link
+      downloadLink.click();
+    }
+  
+    function exportTextToHTML(filename) {
+      var csv = [];
+      var rows = document.querySelectorAll("table tr");
+
+      for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td");  //("td,th")
+          
+        for (var j = 0; j < cols.length; j++) 
+          row.push(cols[j].innerText);
+        
+        csv.push(row.join());        
+      }
+
+      // Download CSV file
+      downloadCSV(csv.join("\n"), filename);
+    }
+  </script>
+  
+  
+  
+  
+  
+  
+{% endblock %}
