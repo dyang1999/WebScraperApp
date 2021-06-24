@@ -40,7 +40,7 @@ env\bin\activate
 * pip install the following python libraries  --  requests, flask_paginate, Flask, beautifulsoup4, lxml (version details found in requirements.txt)
                                              
 
-### Executing program
+## Executing the program
 
 * To load up the webapp, enable the virtual environement in the project folder and enter the following into the cmd/terminal:
 
