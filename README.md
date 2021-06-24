@@ -37,11 +37,8 @@ env\bin\activate
 ```
 * Once the virtual environment has been activated ie (env) will be shown before the terminal prompt,
 
-* pip install the following python libraries  --  requests
-                                                  flask_paginate
-                                                  Flask
-                                                  beautifulsoup4
-                                                  lxml
+* pip install the following python libraries  --  requests, flask_paginate, Flask, beautifulsoup4, lxml (version details found in requirements.txt)
+                                             
 
 ### Executing program
 
