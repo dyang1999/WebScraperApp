@@ -1,4 +1,4 @@
-# Webapp---scraper
+# WebScraperApp
 
 ## Description
 
