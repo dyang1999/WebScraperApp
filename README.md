@@ -63,8 +63,9 @@ https://www.securityweek.com/threat-actor-abuses-microsoft%E2%80%99s-whcp-sign-m
 - In this case, I wish to scrape the title "Threat Actor Abuses Microsoft’s WHCP to Sign Malicious Drivers" which is located under the h2 tag, with a class, "page-title".       Input "h2" into the "tag name" row. Input "page-title" into the "CSS class" row (optional, it will be compulsory if the website has other instances of h2 tags cotaining       text)
 
   ![Imgur](https://i.imgur.com/dedDzGk.png)
-  
-- I wish to scrape the body of the article as well. Upon inspection , there are 2 components where test is found, the sypnosis in bold and the main body paragraphs. All of     which are encapsulated by different immediate tags, <span> and <p>s respectively. As such going up a level in the html markup language we see <div class="content clear-       block"> encapsualting both areas of interest. Therefore we key in "div" into the "tag name" row and "content clear-block" into the "css class" row.
+ 
+- I wish to scrape the body of the article as well. Upon inspection, there are 2 components where test is found, the sypnosis in bold and the main body paragraphs. All of which are encapsulated by different immediate tags, (span) and (p) respectively. As such going up a level in the html markup language we see (div class="content clear-block") encapsualting both areas of interest. Therefore we key in "div" into the "tag name" row and "content clear-block" into the "css class" row.
+
   
   ![Imgur](https://i.imgur.com/HNvOWMo.png)
   
