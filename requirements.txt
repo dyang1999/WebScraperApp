@@ -1,5 +1,5 @@
-requests
-flask_paginate
-Flask
-beautifulsoup4
-lxml
+requests - 2.24.0
+flask_paginate - 0.8.1
+Flask -  1.1.2
+beautifulsoup4 - 4.9.3 
+lxml - 4.6.1
