@@ -52,9 +52,9 @@ python app.py
 
 # Part II Scraping instructions
 
-https://www.securityweek.com/threat-actor-abuses-microsoft%E2%80%99s-whcp-sign-malicious-drivers will be used as an example to demonstrate the app functionalities. 
+https://www.securityweek.com/threat-actor-abuses-microsoft%E2%80%99s-whcp-sign-malicious-drivers will be used as an example to demonstrate the app's functionalities. 
 
-1. Upon launching the website, if the input url is valid, a green alert will be shown along with the html of the website.
+1. Upon launching the webapp, if the input url is valid, a green alert will be shown along with the html of the website.
 
   ![Imgur](https://i.imgur.com/rcoZv3N.png)
   ![Imgur](https://i.imgur.com/sXRqzRB.png)
