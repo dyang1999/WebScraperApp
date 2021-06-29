@@ -26,12 +26,12 @@ Enter the following line into cmd window/terminal to build virtual environment i
 python -m venv env
 ```
 
-(For windows) To enable the virtual environment, in the same destination enter:
+(For windows) To enable the virtual environment, in the current directory enter:
 
 ``` 
 env\Scripts\activate
 ```
-(For mac) To enable the virtual environment, in the same destination enter:
+(For mac) To enable the virtual environment, in the current directory enter:
 ``` 
 env\bin\activate
 ```
