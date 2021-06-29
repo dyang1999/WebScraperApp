@@ -56,33 +56,33 @@ https://www.securityweek.com/threat-actor-abuses-microsoft%E2%80%99s-whcp-sign-m
 
 1. Upon launching the website, if the input url is valid, a green alert will be shown along with the html of the website.
 
-[Imgur](https://i.imgur.com/rcoZv3N.png)
-[Imgur](https://i.imgur.com/sXRqzRB.png)
+  ![Imgur](https://i.imgur.com/rcoZv3N.png)
+  ![Imgur](https://i.imgur.com/sXRqzRB.png)
 
 2. Inspect orginal website for the tags containing text that you wish to scrape. 
 - In this case, I wish to scrape the title "Threat Actor Abuses Microsoft’s WHCP to Sign Malicious Drivers" which is located under the h2 tag, with a class, "page-title".       Input "h2" into the "tag name" row. Input "page-title" into the "CSS class" row (optional, it will be compulsory if the website has other instances of h2 tags cotaining       text)
 
-[Imgur](https://i.imgur.com/dedDzGk.png)
+  ![Imgur](https://i.imgur.com/dedDzGk.png)
   
 - I wish to scrape the body of the article as well. Upon inspection , there are 2 components where test is found, the sypnosis in bold and the main body paragraphs. All of     which are encapsulated by different immediate tags, <span> and <p>s respectively. As such going up a level in the html markup language we see <div class="content clear-       block"> encapsualting both areas of interest. Therefore we key in "div" into the "tag name" row and "content clear-block" into the "css class" row.
   
-[Imgur](https://i.imgur.com/HNvOWMo.png)
+  ![Imgur](https://i.imgur.com/HNvOWMo.png)
   
 3. Press "add" to include new markers and press "scrape" when you have included everything you need.
   
-[Imgur](https://i.imgur.com/upCdjDw.png)
+  ![Imgur](https://i.imgur.com/upCdjDw.png)
   
 4. Result page example
   
-[Imgur](https://i.imgur.com/9UTZLZY.png)
+  ![Imgur](https://i.imgur.com/9UTZLZY.png)
   
 5. "Print" page as a PDF or "Download" content as a HTML file
   
   HTML:
-[Imgur](https://i.imgur.com/3EdQpEK.png)
+  ![Imgur](https://i.imgur.com/3EdQpEK.png)
   
   PDF:
-[Imgur](https://i.imgur.com/k05ean4.png)
+  ![Imgur](https://i.imgur.com/k05ean4.png)
 
 
 
