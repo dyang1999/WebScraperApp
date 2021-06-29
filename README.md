@@ -15,12 +15,12 @@ Download results as pdf, html files are available.
 
 * To build a virtual environment:
 
-Change directory to the folder WebScraperApp-main in the terminal 
+Change directory to the folder, "WebScraperApp-main" in the terminal 
 
 ``` 
 cd C:\Users\Daniel\Desktop\WebScraperApp-main
 ```
-Enter the following line into cmd window/terminal to build virtual environement in the project folder
+Enter the following line into cmd window/terminal to build virtual environment in the project folder
 
 ``` 
 python -m venv env
