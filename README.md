@@ -47,6 +47,17 @@ env\bin\activate
 ```
 python app.py
 ```
+* Access the local host url, http://127.0.0.1:5000/, in your internet browser.
+
+
+# Scraping instructions
+
+https://www.securityweek.com/threat-actor-abuses-microsoft%E2%80%99s-whcp-sign-malicious-drivers will be used as an example to demonstrate the app functionalities. 
+
+Upon launching the website, 
+
+
+
 
 
 ## Authors
@@ -60,4 +71,3 @@ Daniel Yang
 
 ## Future works
 * dynamic scraping functionalities
-
