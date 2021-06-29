@@ -42,7 +42,7 @@ env\bin\activate
 
 ## Executing the program
 
-* To load up the webapp, enable the virtual environement in the project folder and enter the following into the cmd/terminal:
+* To load up the webapp, enable the virtual environment in the project folder and enter the following into the cmd/terminal:
 
 ```
 python app.py
