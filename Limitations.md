@@ -6,69 +6,69 @@ While web scraping, often the error 404 was returned by beautiful soup triggered
 
 Standard user agent list: https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome
 
-### Solution
+        ### Solution
 
-``` 
->>> import requests
->>> url = "https://www.transfermarkt.com/jumplist/startseite/wettbewerb/GB1"
->>> headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
+        ``` 
+        >>> import requests
+        >>> url = "https://www.transfermarkt.com/jumplist/startseite/wettbewerb/GB1"
+        >>> headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
 
-# Make request with "User-Agent" Header
->>> response = requests.get(url, headers=headers)
->>> response.status_code
-200   # success response
+        # Make request with "User-Agent" Header
+        >>> response = requests.get(url, headers=headers)
+        >>> response.status_code
+        200   # success response
 
->>> response.text  # will return the website content
-```
+        >>> response.text  # will return the website content
+        ```
 ## Limitations of BS4 library
 
 Certain websites are dynamically loaded - i.e html is loaded in by JavaScript. As a result errors as follows are often seen where there are either missing parents/ children tags or BS4 scrapping off JS.
 
 ![Imgur](https://i.imgur.com/UJ0iEqr.png)
 
-### Solution
+        ### Solution
 
-Loading in the HTML is therefore required, which can be resolved using Selenium (python library) which loads the webpage in a chrome driver. This solution works but often requires a side running brower to run the python based Selenium script.
+        Loading in the HTML is therefore required, which can be resolved using Selenium (python library) which loads the webpage in a chrome driver. This solution works but often requires a side running brower to run the python based Selenium script.
 
-### Alternative solution
+        ### Alternative solution
 
-Using JavaScript's Puppeteer extension to acheive simialar functionalities as Selenium without having to run a side browser or utilize a driver.
+        Using JavaScript's Puppeteer extension to acheive simialar functionalities as Selenium without having to run a side browser or utilize a driver.
 
-JS Code snippet applied to an Amazon website selling a book : 
+        JS Code snippet applied to an Amazon website selling a book : 
 
-```
-const puppeteer = require('puppeteer');
+        ```
+        const puppeteer = require('puppeteer');
 
-async function scrapeProduct(url){
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(url);
-    
-    // scrape src content for image links
-    const [el] = await page.$x('//*[@id="imgBlkFront"]');
-    const src = await el.getProperty('src');
-    const imgURL = await scr.jsonValue();
-    
-    // scrape title of book
-    const [el2] = await page.$x('//*[@id="productTitle"]/text()');
-    const txt = await el2.getProperty('textContent');
-    const title = await txt.jsonValue();
+        async function scrapeProduct(url){
+            const browser = await puppeteer.launch();
+            const page = await browser.newPage();
+            await page.goto(url);
 
-    // scrape price of book
-    const [el3] = await page.$x('//*[@id="buyNewSection"]/div/div/span/span');
-    const txt2 = await el3.getProperty('textContent');
-    const price = await txt2.jsonValue();
+            // scrape src content for image links
+            const [el] = await page.$x('//*[@id="imgBlkFront"]');
+            const src = await el.getProperty('src');
+            const imgURL = await scr.jsonValue();
 
+            // scrape title of book
+            const [el2] = await page.$x('//*[@id="productTitle"]/text()');
+            const txt = await el2.getProperty('textContent');
+            const title = await txt.jsonValue();
 
-    console.log({title, price});
-
-    browser.close();
-}
+            // scrape price of book
+            const [el3] = await page.$x('//*[@id="buyNewSection"]/div/div/span/span');
+            const txt2 = await el3.getProperty('textContent');
+            const price = await txt2.jsonValue();
 
 
-scrapeProduct('https://www.amazon.sg/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X')
-```
+            console.log({title, price});
 
-Content is accessed via XPath. If unsucessful in obtaining data using shorthand Xpath, copy and use the full Xpath.
+            browser.close();
+        }
+
+
+        scrapeProduct('https://www.amazon.sg/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X')
+        ```
+
+        Content is accessed via XPath. If unsucessful in obtaining data using shorthand Xpath, copy and use the full Xpath.
 
 
