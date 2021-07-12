@@ -26,7 +26,7 @@ Certain websites are dynamically loaded - i.e html is loaded in by JavaScript. A
 
 ![Imgur](https://i.imgur.com/UJ0iEqr.png)
 
-#^ two spaces ### Solution
+### Solution
 
 Loading in the HTML is therefore required, which can be resolved using Selenium (python library) which loads the webpage in a chrome driver. This solution works but often requires a side running brower to run the python based Selenium script.
 
